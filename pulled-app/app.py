@@ -31,7 +31,7 @@ def update_item(index):
 
 if __name__ == '__main__':
     try:
-        app.run(debug=True, host='localhost', port=5000)
+        app.run(debug=True, host='localhost', port=3001)
     except OSError as e:
         print(f"Error starting Flask server: {e}")
         sys.exit(1)
