@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, redirect, url_for
+import sys
 
 app = Flask(__name__)
 
@@ -29,4 +30,8 @@ def update_item(index):
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=5000)
+    try:
+        app.run(debug=True, host='localhost', port=5000)
+    except OSError as e:
+        print(f"Error starting Flask server: {e}")
+        sys.exit(1)
