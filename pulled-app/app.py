@@ -29,5 +29,4 @@ def update_item(index):
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=3000)
-
+    app.run(debug=True, host='localhost', port=5000)
