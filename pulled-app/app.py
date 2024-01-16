@@ -27,3 +27,4 @@ def update_item(index):
     if index < len(items):
         items[index] = request.form.get('new_item')
     return redirect(url_for('index'))
+
